@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+    background-color: #5372F0;
+    color: white;
+}
+
+.header h2, 
+.header p {
+    padding: 10px;
+}
+
+.header p {
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-container {
+    width: 690px;
+    height: 400px;
+    border: 1px solid #565656;
+    border-radius: 7px;
+    padding: 10px 20px;
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container h1 {
+    text-align: center;
+    color: #3c3b3b;
+}
+
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #565656;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border-left: 1px solid #565656;
+}
+
+.text-input textarea {
+    height: 200px; 
+    width: 320px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    background: none;
+    padding: 0.625em  0.9375em;
+    color: black;
+}
+
+.controls, .controls li, .icons, .icons svg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 0.75em 0.9375em;
+}
+
+.controls .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls .row .from .icons {
+    padding-right: 0.9375em;
+    border-right: 1px solid #bbb;
+}
+
+.controls .row .to .icons {
+    padding-left: 0.9375em;
+    border-left: 1px solid #bbb;
+}
+
+.controls .icons svg {
+    width: 50px; 
+    color: #9f9f9f;
+    font-size: 0.875rem;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.controls .row select {
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    background: none;
+    color: #484848;
+}
+
+.controls .exchange {
+    fill: black;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.controls .exchange:active {
+    transform: scale(0.98); 
+}
+
+.controls .icons svg:active {
+    transform: scale(0.95); 
+}
+
+.main-container button {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    font-size: 17px;
+    background: #5372F0;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease
+}
+
+.main-container button:hover {
+    background: #3F58C7;
+}
+
+.main-container button:active {
+    transform: scale(0.98); 
+    background-color: #486af2;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    background-color: #5372F0;
+    padding: 10px;
+    text-align: center;
+    color: white
+}

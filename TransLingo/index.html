@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/icons/translate.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>TransLingo</title>
+</head>
+<body>
+    <header class="header">
+        <h2>TransLingo.</h2>
+        <p>John Loyd B. Maskariño</p>
+    </header>
+    <div class="main-container">
+        <h1>Language Translator</h1>
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Enter text"></textarea>
+                <textarea class="to-text" placeholder="Translation" readonly disabled></textarea>
+            </div>
+
+            <ul class="controls">
+                <li class="row from">
+                    <div class="icons">
+                        <svg id="from" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368" onclick="speakOriginal()">
+                            <path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/>
+                        </svg>
+                    </div>
+                    <select class="from-lang">
+                        <option value="en" selected>English</option>
+                        <option value="fr">French</option>
+                        <option value="es">Spanish</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="zh">Chinese (Mandarin)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <option value="bn">Bengali</option>
+                        <option value="pa">Punjabi</option>
+                        <option value="jv">Javanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="ur">Urdu</option>
+                        <option value="fa">Persian</option>
+                        <option value="tr">Turkish</option>
+                        <option value="th">Thai</option>
+                        <option value="ms">Malay</option>
+                        <option value="id">Indonesian</option>
+                        <option value="tl">Tagalog</option>
+                        <option value="he">Hebrew</option>
+                        <option value="pl">Polish</option>
+                        <option value="uk">Ukrainian</option>
+                        <option value="nl">Dutch</option>
+                        <option value="sv">Swedish</option>
+                        <option value="no">Norwegian</option>
+                        <option value="da">Danish</option>
+                        <option value="fi">Finnish</option>
+                        <option value="el">Greek</option>
+                        <option value="hu">Hungarian</option>
+                        <option value="ro">Romanian</option>
+                        <option value="cs">Czech</option>
+                        <option value="sk">Slovak</option>
+                        <option value="bg">Bulgarian</option>
+                        <option value="sr">Serbian</option>
+                        <option value="hr">Croatian</option>
+                        <option value="lt">Lithuanian</option>
+                        <option value="lv">Latvian</option>
+                        <option value="et">Estonian</option>
+                        <option value="is">Icelandic</option>
+                        <option value="af">Afrikaans</option>
+                        <option value="sw">Swahili</option>
+                        <option value="yo">Yoruba</option>
+                        <option value="ig">Igbo</option>
+                        <option value="zu">Zulu</option>
+                        <option value="xh">Xhosa</option>
+                        <option value="am">Amharic</option>
+                        <option value="om">Oromo</option>
+                        <option value="ti">Tigrinya</option>
+                        <option value="so">Somali</option>
+                        <option value="km">Khmer</option>
+                        <option value="my">Burmese</option>
+                        <option value="si">Sinhala</option>
+                        <option value="ne">Nepali</option>
+                        <option value="lo">Lao</option>
+                        <option value="mn">Mongolian</option>
+                        <option value="kk">Kazakh</option>
+                        <option value="uz">Uzbek</option>
+                        <option value="tk">Turkmen</option>
+                        <option value="ky">Kyrgyz</option>
+                        <option value="ba">Bashkir</option>
+                        <option value="tt">Tatar</option>
+                        <option value="ka">Georgian</option>
+                        <option value="hy">Armenian</option>
+                        <option value="az">Azerbaijani</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="ta">Tamil</option>
+                        <option value="te">Telugu</option>
+                        <option value="kn">Kannada</option>
+                        <option value="gu">Gujarati</option>
+                        <option value="mr">Marathi</option>
+                        <option value="as">Assamese</option>
+                        <option value="or">Odia</option>
+                        <option value="bo">Tibetan</option>
+                        <option value="ps">Pashto</option>
+                        <option value="sd">Sindhi</option>
+                        <option value="si">Sinhala</option>
+                        <option value="mn">Mongolian</option>
+                    </select>
+                </li>
+
+                <li class="exchange">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368" onclick="exchangeLanguages()">
+                        <path d="M280-120 80-320l200-200 57 56-104 104h607v80H233l104 104-57 56Zm400-320-57-56 104-104H120v-80h607L623-784l57-56 200 200-200 200Z"/>
+                    </svg>
+                </li>
+
+                <li class="row to">
+                    <select class="to-lang">
+                        <option value="en" selected>English</option>
+                        <option value="fr">French</option>
+                        <option value="es">Spanish</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="zh">Chinese (Mandarin)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <option value="bn">Bengali</option>
+                        <option value="pa">Punjabi</option>
+                        <option value="jv">Javanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="vi">Vietnamese</option>
+                        <option value="ur">Urdu</option>
+                        <option value="fa">Persian</option>
+                        <option value="tr">Turkish</option>
+                        <option value="th">Thai</option>
+                        <option value="ms">Malay</option>
+                        <option value="id">Indonesian</option>
+                        <option value="tl">Tagalog</option>
+                        <option value="he">Hebrew</option>
+                        <option value="pl">Polish</option>
+                        <option value="uk">Ukrainian</option>
+                        <option value="nl">Dutch</option>
+                        <option value="sv">Swedish</option>
+                        <option value="no">Norwegian</option>
+                        <option value="da">Danish</option>
+                        <option value="fi">Finnish</option>
+                        <option value="el">Greek</option>
+                        <option value="hu">Hungarian</option>
+                        <option value="ro">Romanian</option>
+                        <option value="cs">Czech</option>
+                        <option value="sk">Slovak</option>
+                        <option value="bg">Bulgarian</option>
+                        <option value="sr">Serbian</option>
+                        <option value="hr">Croatian</option>
+                        <option value="lt">Lithuanian</option>
+                        <option value="lv">Latvian</option>
+                        <option value="et">Estonian</option>
+                        <option value="is">Icelandic</option>
+                        <option value="af">Afrikaans</option>
+                        <option value="sw">Swahili</option>
+                        <option value="yo">Yoruba</option>
+                        <option value="ig">Igbo</option>
+                        <option value="zu">Zulu</option>
+                        <option value="xh">Xhosa</option>
+                        <option value="am">Amharic</option>
+                        <option value="om">Oromo</option>
+                        <option value="ti">Tigrinya</option>
+                        <option value="so">Somali</option>
+                        <option value="km">Khmer</option>
+                        <option value="my">Burmese</option>
+                        <option value="si">Sinhala</option>
+                        <option value="ne">Nepali</option>
+                        <option value="lo">Lao</option>
+                        <option value="mn">Mongolian</option>
+                        <option value="kk">Kazakh</option>
+                        <option value="uz">Uzbek</option>
+                        <option value="tk">Turkmen</option>
+                        <option value="ky">Kyrgyz</option>
+                        <option value="ba">Bashkir</option>
+                        <option value="tt">Tatar</option>
+                        <option value="ka">Georgian</option>
+                        <option value="hy">Armenian</option>
+                        <option value="az">Azerbaijani</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="ta">Tamil</option>
+                        <option value="te">Telugu</option>
+                        <option value="kn">Kannada</option>
+                        <option value="gu">Gujarati</option>
+                        <option value="mr">Marathi</option>
+                        <option value="as">Assamese</option>
+                        <option value="or">Odia</option>
+                        <option value="bo">Tibetan</option>
+                        <option value="ps">Pashto</option>
+                        <option value="sd">Sindhi</option>
+                        <option value="si">Sinhala</option>
+                        <option value="mn">Mongolian</option>
+                    </select>
+                    <div class="icons">
+                        <svg id="to" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368" onclick="speakTranslation()">
+                            <path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="translate">Translate</button>
+    </div>
+    <footer class="footer">
+        <p> <span style="color: rgb(58, 58, 58); font-weight: bold;">&copy;</span> TransLingo. all rights Reserved 2024</p>
+    </footer>
+</body>
+</html>
